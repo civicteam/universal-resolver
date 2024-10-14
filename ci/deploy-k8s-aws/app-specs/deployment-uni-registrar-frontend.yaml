@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: uni-registrar-frontend
-        image: identitydotcom/uni-registrar-frontend
+        image: civicteam/uni-registrar-frontend
         imagePullPolicy: Always
         ports:
         - containerPort: 7082
