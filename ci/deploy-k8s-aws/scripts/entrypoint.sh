@@ -12,12 +12,10 @@ touch /tmp/kube/kubeconfig
 export KUBECONFIG=/tmp/kube/kubeconfig
 chmod 600 $KUBECONFIG
 
-if [ "$ENVIRONMENT" = Prod ]; then export CLUSTER="civic-prod"; else export CLUSTER="civic-dev"; fi
-
 echo "ENVIRONMENT: $ENVIRONMENT"
-echo "CLUSTER: $CLUSTER"
+echo "EKS_CLUSTER_NAME: $EKS_CLUSTER_NAME"
 
-aws eks --region us-east-1 update-kubeconfig --name $CLUSTER
+aws eks --region us-east-1 update-kubeconfig --name $EKS_CLUSTER_NAME
 
 echo "## Kubeconfig ##"
 kubectl config view
