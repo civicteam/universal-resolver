@@ -22,7 +22,7 @@ spec:
           image: universalresolver/universal-resolver-frontend:0.3.0
           imagePullPolicy: Always
           ports:
-            - containerPort: 7081
+            - containerPort: 80
           env:
             - name: BACKEND_URL
               valueFrom:
@@ -42,4 +42,4 @@ spec:
   ports:
     - protocol: TCP
       port: 7081
-      targetPort: 7081
+      targetPort: 80
