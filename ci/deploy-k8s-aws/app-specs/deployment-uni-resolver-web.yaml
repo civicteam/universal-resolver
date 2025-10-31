@@ -19,14 +19,13 @@ spec:
     spec:
       containers:
         - name: uni-resolver-web
-          # Use the civic Docker image for the Universal Resolver Web
-          # so that we can control the did methods supported - specifically add preview methods like "did:icp"
-          # not yet supported in the upstream.
-          # If we do not have any unofficial ones, we can and should use the upstream image instead
-          image: civicteam/uni-resolver-web
+          image: universalresolver/uni-resolver-web
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
+          env:
+            - name: uniresolver_web_driver_url_did_icp
+              value: "http://driver-did-icp:8080/1.0/identifiers/"
           livenessProbe:
             httpGet:
               path: "/1.0/methods"

@@ -19,10 +19,10 @@ spec:
     spec:
       containers:
         - name: uni-resolver-frontend
-          image: universalresolver/universal-resolver-frontend:0.3.0
+          image: universalresolver/universal-resolver-frontend
           imagePullPolicy: Always
           ports:
-            - containerPort: 80
+            - containerPort: 7081
           env:
             - name: BACKEND_URL
               valueFrom:
@@ -42,4 +42,4 @@ spec:
   ports:
     - protocol: TCP
       port: 7081
-      targetPort: 80
+      targetPort: 7081

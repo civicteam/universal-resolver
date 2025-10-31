@@ -11,7 +11,7 @@ import pathlib
 # CONSTANTS you may need to change:
 DEV_DOMAIN_NAME = 'did-dev.civic.com'
 PROD_DOMAIN_NAME='did.civic.com'
-UNIVERSAL_RESOLVER_FRONTEND_TAG = "universalresolver/uni-resolver-frontend:0.3.0;"
+UNIVERSAL_RESOLVER_FRONTEND_TAG = "universalresolver/uni-resolver-frontend:latest;"
 NAMESPACE = "did"
 
 
